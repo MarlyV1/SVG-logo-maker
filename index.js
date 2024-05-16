@@ -28,6 +28,11 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((data) => {
+    
+    if(data.text.length > 3) {
+        throw new Error("SVG text should only contain three characters.")
+    }
+
    const shape = shapeDetails(data.shape, data.shapeColor);
    const file = generateFile(data, shape);
    renderFile(file);

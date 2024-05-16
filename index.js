@@ -45,3 +45,13 @@ function shapeDetails(shape, color) {
     }
     return newShape.render();
 }
+
+function generateFile(data, shape) {
+    return `<svg width="300" height="200">
+    
+    ${shape}
+
+    <text x="100" y="100" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text>
+
+    </svg>`
+}

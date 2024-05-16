@@ -28,7 +28,9 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((data) => {
-    console.log(shapeDetails(data.shape, data.shapeColor))
+   const shape = shapeDetails(data.shape, data.shapeColor);
+   const file = generateFile(data, shape);
+   renderFile(file);
 })
 
 function shapeDetails(shape, color) {

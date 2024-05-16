@@ -55,3 +55,7 @@ function generateFile(data, shape) {
 
     </svg>`
 }
+
+function renderFile(file) {
+    fs.writeFile('logo.svg', file, (err) => err ? console.err(err) : console.log('Successfully created SVG file'))
+}

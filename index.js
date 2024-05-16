@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { Circle, Square, Triangle } = require('./lib/shapes');
 
 
 const questions = [
@@ -27,5 +28,20 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((data) => {
-    
+    console.log(shapeDetails(data.shape, data.shapeColor))
 })
+
+function shapeDetails(shape, color) {
+    let newShape;
+
+    if(shape === "Circle") {
+        newShape = new Circle(`${color}`);
+
+    } else if(shape === "Square") {
+        newShape = new Square(`${color}`);
+        
+    } else if(shape === "Triangle") {
+        newShape = new Triangle(`${color}`)
+    }
+    return newShape.render();
+}

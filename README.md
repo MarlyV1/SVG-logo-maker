@@ -12,6 +12,7 @@ This application can be used by using node index.js to start the inquirer npm wh
 
 <a href="https://drive.google.com/file/d/1JhvWtqLmZaAyKN8Ma_gHPCrKP0CL23g6/view?usp=sharing">Demo for the SVG Logo Maker</a>
 
+![alt text](assets/images/screenshot.png)
 
 ## Tests
 

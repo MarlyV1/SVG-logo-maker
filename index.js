@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./lib/shapes');
+const path = require('path');
 
 
 const questions = [
@@ -64,5 +65,5 @@ function generateFile(data, shape) {
 }
 
 function renderFile(file) {
-    fs.writeFile('logo.svg', file, (err) => err ? console.err(err) : console.log('Successfully created SVG file'))
+    return fs.writeFileSync(path.join(process.cwd(), "logo.svg", file))
 }

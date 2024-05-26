@@ -58,7 +58,7 @@ function generateFile(data, shape) {
     
     ${shape}
 
-    <text x="100" y="100" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text>
+    <text x="150" y="110" text-anchor="middle" font-size="40" fill="${data.textColor}">${data.text}</text>
 
     </svg>`
 }
